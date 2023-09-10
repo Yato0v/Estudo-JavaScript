@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio dos botões</title>
+    <style>
+        div{
+            margin: 20px;
+            font: normal 20px arial;
+            background: grey;
+            height: 150px;
+            width: 150px;
+            line-height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: left;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio dos botões</h1>
+    <p>clique nos botões.</p>
+    <div id="bot1"> <p>Botão 1</p> </div>
+    <div id="bot2"> <p>Botão 2</p> </div>
+    <div id="bot3"> <p>Botão 3</p> </div>
+    <script>
+        var b1 = window.document.getElementById('bot1')
+        var b2 = window.document.getElementById('bot2')
+        var b3 = window.document.getElementById('bot3')
+        b1.addEventListener('click', clicar)
+        b2.addEventListener('click', clicar)
+        b3.addEventListener('click', clicar)
+
+        function clicar(e){
+            alert(e.target.innerText)
+            console.log(e.target)
+        }
+
+    </script>
+</body>
+</html>
