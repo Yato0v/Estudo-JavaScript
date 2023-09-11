@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual seu país</title>
+</head>
+<body>
+    <h1>De onde você veio?</h1>
+    <input type="text" name="txtvel" id="txtvel">
+    <input type="button" value="verificar" onclick="clicar()">
+    <div id="res">
+    </div>
+    <script>
+        function clicar(){
+        var pais = window.document.getElementById ('txtvel').value
+        var res = window.document.getElementById ('res')
+        res.innerHTML = `Você veio do(a) ${pais},`
+        if (pais==`Brasil`){
+            res.innerHTML +=` então você é <strong>brasileiro</strong>`
+        } else{
+            res.innerHTML += ` então você é <strong>estrangeiro</strong>`
+        }
+    }
+    </script>
+</body>
+</html>
