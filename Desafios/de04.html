@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troco</title>
+</head>
+<body>
+    <h1>Calculando troco</h1>
+    <input type="button" value="Comprar produto" onclick="clicar()">
+    <script>
+        
+        function clicar(){
+            
+            var produto = prompt('O que você comprou?')
+            var valor = prompt(`Quanto custa ${produto} que você comprou?`)
+            var dinheiro = prompt(`Qual foi o valor que você deu pra pagar ${produto}`)
+            
+            if(valor <= dinheiro){
+
+                alert(`Você comprou um ${produto}, que custa R$${valor} e você deu R$${dinheiro} logo seu troco é R$${dinheiro --- valor}`)                
+
+            }else {
+                
+                alert("Compra inválida")
+
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>
