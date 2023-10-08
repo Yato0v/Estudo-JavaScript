@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antes e depois</title>
 </head>
+<h1>Antes e depois</h1>
+<input type="button" value="Clique aqui" onclick="clicar()">
 <body>
     <script>
-        var n= window.prompt('Digite um número')
+        function clicar() { n= window.prompt('Digite um número')
         window.alert(`Antes de ${n} vem o ${--n}. Depois de ${++n} vem o ${++n}.`)
+    }
     </script>
 </body>
 </html>
