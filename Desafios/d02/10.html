@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>numero aleatorio</title>
+</head>
+<body>
+    <h1>Jogo de azar</h1>
+    <p>escolha um numero de 1 a 3</p>
+    <input type="text" name="valor" id="valor">
+    <input type="button" value="verificar" onclick="clicar()">
+    <div id="res">
+    </div>
+    <script>
+        function clicar(){
+        var aleatorio = Math.floor(Math.random(0) * 3);
+        var usernumber = document.getElementsByClassName('valor').value
+        var res = document.getElementById('res')
+        res.innerHTML = `Você escolhe ${usernumber}`
+        if(aleatorio == usernumber){
+            res.innerHTML += `Você <strong>VENCEU!!!</strong>`
+        }else if (usernumber > 3){
+            res.innerHTML = ('INVALIDOO')
+        }else if(usernumber != aleatorio){
+            res.innerHTML += `Você <strong>Perdeu!!!</strong>`
+        }}
+    </script>
+</body>
+</html>
