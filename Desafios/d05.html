@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convesor de medidas</title>
+</head>
+<body>
+    <h1>Convevrsor de medidas</h1>
+    <input type="button" value="converter" onclick="clicar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function clicar(){
+            var n = prompt('Digite um valor em Metros(m)')
+
+            var m = Number(n);
+
+            var res = document.getElementById('res')
+            
+            res.innerHTML = `<h1> A distância de ${m} metros, corresponde a....</h1>${1000 * m} quilômetros<b>(km)</b>.<br>${m * 100} dectâmetro<b>(Hm)</b>.<br> ${m * 10} decâmetro<b>(Dam)</b>.<br> ${m / 10} decímetro<b>(dm)</b>.<br> ${m / 100} centímetro<b>(Cm)</b>.<br> ${m / 1000} mílimetro<b>(mm)</b>. `
+        }
+    </script>
+</body>
+</html>
