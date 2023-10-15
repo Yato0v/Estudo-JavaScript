@@ -1,17 +1,20 @@
 function carregar(){
     var msg = document.getElementById('msg')
-    var img = document.getElementById('ft')
+    var ft = document.getElementById('ft')
     var dta = new Date()
     var hora = dta.getHours()
-    // msg.innerHTML= `Agora são ${hora} horas.`
+    msg.innerHTML= `Agora são ${hora} horas.`
     if (hora >= 0 && hora < 12){
         // dia
-        img.src = 'dia.png'
-    } else if (hora >= 12 && hora < 18){
+        ft.src = 'dia.png'
+        document.body.style.background = '#e2cd9f'
+    } else if (hora >= 12 && hora <= 18){
         // tarde
-        img.src = 'tarde.png'
+        ft.src = 'tarde.png'
+        document.body.style.background = '#b9846f'
     } else{
         // noite
-        img.src = 'noite.png'
+        ft.src = 'noite.png'
+        document.body.style.background = '#515154'
     }
 }
